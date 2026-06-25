@@ -1,8 +1,8 @@
 # Jeu 3D
 
 ## Liens vers l'application
-- Lien public: lien detecte mais masque par securite orchestrateur
-- GitHub: non detecte
+- Lien public: https://neon-rush.skyia.net/
+- GitHub: https://github.com/RYJITS/jeu3d
 
 ## A quoi sert le projet
 Jeu 3D est un runner navigateur en 3D. Le joueur evite des obstacles, gagne des points, monte de niveau, charge une invincibilite, conserve des scores locaux et peut gagner des codes promo SkyIA.
@@ -52,9 +52,9 @@ Le projet a ete concu comme une base de gameplay rapide: un coeur de jeu simple,
 ## Mises a jour
 - Fiche actualisee depuis le registre orchestrateur et le catalogue projet.
 - Changements locaux detectes: relire la fiche apres validation des modifications.
-- Derniere mise a jour registre connue: 2026-06-21T21:46:01.967Z.
+- Derniere mise a jour registre connue: 2026-06-25T00:46:45.686Z.
 
 ## Derniere mise a jour
-2026-06-21T21:46:01.969Z
+2026-06-25T00:46:45.690Z
 
 > Fichier genere par l'orchestrateur pour le hub Site Ma Methode.
