@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-cyan: #00f3ff;
+  --color-neon-pink: #ff00ff;
+  --color-neon-purple: #b500ff;
+  --color-dark-bg: #050510;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white overflow-hidden m-0 p-0 overscroll-none select-none;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  #root {
+    @apply w-screen h-screen relative;
+  }
+}
