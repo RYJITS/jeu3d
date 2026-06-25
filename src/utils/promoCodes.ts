@@ -1,4 +1,4 @@
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp, type FieldValue } from "firebase/firestore";
 import { db } from "./firebase";
 
 /**
@@ -30,7 +30,7 @@ export interface PromoCodeData {
     playerName: string;
     score: number;
     level: number;
-    createdAt: any; // Firestore timestamp
+    createdAt: FieldValue;
     active: boolean;
     currentUses: number;
     maxUses: number;

@@ -80,7 +80,10 @@ export function Player() {
     useEffect(() => {
         if (status === 'menu' || status === 'playing') {
             if (meshRef.current) meshRef.current.position.set(0, 0.5, 0);
-            setTargetX(0);
+            const resetTimer = window.setTimeout(() => {
+                setTargetX(0);
+            }, 0);
+            return () => window.clearTimeout(resetTimer);
         }
     }, [status]);
 

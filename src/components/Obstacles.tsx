@@ -35,8 +35,11 @@ export function Obstacles() {
 
     // Reset obstacles completely when a new game starts (playCount increments)
     useEffect(() => {
-        setObstacles([]);
+        const resetTimer = window.setTimeout(() => {
+            setObstacles([]);
+        }, 0);
         nextSpawnZ.current = SPAWN_Z;
+        return () => window.clearTimeout(resetTimer);
     }, [playCount]);
 
     // Pre-create geometries to save memory

@@ -1,4 +1,4 @@
-interface Laser {
+export interface Laser {
     id: number;
     x: number;
     z: number;

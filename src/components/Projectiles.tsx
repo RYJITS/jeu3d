@@ -2,11 +2,11 @@ import { useState, useEffect, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { useGameStore } from '../store/gameStore';
-import { laserManager } from '../utils/laserManager';
+import { laserManager, type Laser } from '../utils/laserManager';
 
 export function Projectiles() {
     // We use a shallow copy to trigger React re-renders when lasers change visually
-    const [displayLasers, setDisplayLasers] = useState<any[]>([]);
+    const [displayLasers, setDisplayLasers] = useState<Laser[]>([]);
     const { status } = useGameStore();
 
     const geometry = useMemo(() => new THREE.CylinderGeometry(0.1, 0.1, 2), []);
@@ -21,7 +21,10 @@ export function Projectiles() {
     useEffect(() => {
         if (status !== 'playing') {
             laserManager.clear();
-            setDisplayLasers([]);
+            const resetTimer = window.setTimeout(() => {
+                setDisplayLasers([]);
+            }, 0);
+            return () => window.clearTimeout(resetTimer);
         }
     }, [status]);
 

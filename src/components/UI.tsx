@@ -34,9 +34,16 @@ export function UI() {
 
     useEffect(() => {
         if (level > 1) {
-            setShowLevelUp(true);
-            const timer = setTimeout(() => setShowLevelUp(false), 2000);
-            return () => clearTimeout(timer);
+            const showTimer = window.setTimeout(() => {
+                setShowLevelUp(true);
+            }, 0);
+            const hideTimer = window.setTimeout(() => {
+                setShowLevelUp(false);
+            }, 2000);
+            return () => {
+                window.clearTimeout(showTimer);
+                window.clearTimeout(hideTimer);
+            };
         }
     }, [level]);
 
