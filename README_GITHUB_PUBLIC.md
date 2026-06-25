@@ -26,6 +26,12 @@ npm run dev
 npm run build
 ```
 
+## Captures d'ecran
+
+![Capture desktop](docs/github-captures/20-jeu3d-2026-06-25_02-46-46-desktop.png)
+
+![Capture mobile](docs/github-captures/20-jeu3d-2026-06-25_02-46-46-mobile.png)
+
 ## Variables d'environnement
 
 Copier `.env.example` vers `.env` en local puis remplir les valeurs privees.
